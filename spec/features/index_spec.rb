@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.decribe "user sees all articles" do
+RSpec.describe "user sees all articles" do
   describe "they visits /articles" do
     it "displays all articles" do
-      article_1 = Article.new({title: "Article1 title", body: "Article1 body"})
-      article_2 = Article.new({title: "Article2 title", body: "Article2 body"})
+      article_1 = Article.create!(title: "Article1", body: "Article1 body")
+      article_2 = Article.create!({title: "Article2", body: "Article2 body"})
 
       visit "/articles"
 
