@@ -7,7 +7,6 @@ RSpec.describe "user sees all articles" do
       article_2 = Article.create!({title: "Article2", body: "Article2 body"})
 
       visit "/articles"
-save_and_open_page
 
       expect(page).to have_link(article_1.title)
       expect(page).to have_link(article_2.title)
