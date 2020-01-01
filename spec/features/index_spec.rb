@@ -7,12 +7,9 @@ RSpec.describe "user sees all articles" do
       article_2 = Article.create!({title: "Article2", body: "Article2 body"})
 
       visit "/articles"
-      
-      expect(page).to have_link(article_1.title)
-      expect(page).to have_content(article_1.body)
-      expect(page).to have_link(article_2.title)
-      expect(page).to have_content(article_2.body)
 
+      expect(page).to have_link(article_1.title)
+      expect(page).to have_link(article_2.title)
     end
   end
 end
